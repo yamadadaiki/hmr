@@ -1,0 +1,19 @@
+{
+  "name": "hot-module-replacement-test",
+  "version": "0.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "node ./devserver.js",
+    "build": "copyfiles -u 2 './src/styles/**/*' ./build/styles && copyfiles -u 1 './src/*' ./build && webpack --config webpack.config.prod.js"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.0.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.6",
+    "webpack-merge": "^4.1.4"
+  }
+}
